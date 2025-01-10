@@ -7,6 +7,10 @@ function MainNav() {
       title: "Home",
     },
     {
+      path: "/products",
+      title: "Prodotti",
+    },
+    {
       path: "/about",
       title: "About",
     },
@@ -14,13 +18,17 @@ function MainNav() {
       path: "/contacts",
       title: "Contacts",
     },
+    {
+      path: "/admin/login",
+      title: "Area riservata",
+    },
   ];
 
   return (
     <nav>
       <ul>
         {menu.map((curItem) => (
-          <li>
+          <li key={curItem.title}>
             <NavLink to={curItem.path}>{curItem.title}</NavLink>
           </li>
         ))}
